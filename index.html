@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="top-bar">
-        <button id="dark-mode-toggle" class="hammer">
+        <button id="dark-mode-toggle" class="hammer" aria-label="Toggle dark mode">
             <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <g id="judge-hammer">
                     <rect x="28" y="2" width="8" height="24" fill="black"/>
@@ -28,13 +28,14 @@
     <div id="login-container">
         <h2>تسجيل الدخول</h2>
         <form id="login-form">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
+            <label for="username">اسم المستخدم</label>
+            <input type="text" id="username" placeholder="اسم المستخدم" required>
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
             <button type="submit">تسجيل الدخول</button>
         </form>
     </div>
     
-    <!-- New Warning Section -->
     <div id="warning-container">
         <h1>تنبيه من قبل ريحانة</h1>
         <p class="note">
