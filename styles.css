@@ -24,13 +24,13 @@ body {
 }
 
 #dark-mode-toggle svg {
-    width: 40px; /* Adjusted size */
-    height: 40px; /* Adjusted size */
+    width: 60px; /* Adjusted size */
+    height: 60px; /* Adjusted size */
 }
 
 .logo {
     margin-top: 20px;
-    width: 200px; /* Adjusted size */
+    width: 300px; /* Increased size */
     height: auto;
 }
 
@@ -79,7 +79,7 @@ button:hover {
 
 .note {
     font-family: 'DG Bebo', sans-serif;
-    font-size: 42px; /* Increased size to 3 times the original */
+    font-size: 42px; /* Increased size */
     color: #555;
     text-align: center;
     font-weight: bold;
