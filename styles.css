@@ -42,7 +42,7 @@ body {
 
 .logo {
     margin-top: 20px;
-    width: 600px; /* Increased size */
+    width: 400px; /* Increased size */
     height: auto;
     animation: fadeIn 1s ease-in-out 0.5s;
     animation-fill-mode: backwards;
