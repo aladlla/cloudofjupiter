@@ -1,56 +1,27 @@
-const loginForm = document.getElementById('login-form');
-const searchBar = document.getElementById('search-bar');
-const uploadForm = document.getElementById('upload-form');
-const darkModeToggle = document.getElementById('dark-mode-toggle');
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    const passwordOverlay = document.getElementById('password-overlay');
+    const sitePassword = document.getElementById('site-password');
+    const submitPassword = document.getElementById('submit-password');
 
-loginForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    body.classList.add('password-protected');
 
-    // Basic validation (you would add more robust authentication here)
-    if (username === 'test' && password === 'password') {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('welcome-container').style.display = 'block';
-        document.getElementById('welcome-username').innerText = username;
-    } else {
-        // Custom alert message
-        alert(`ريحانة: معلوماتك المدخلة غير صحيحة`);
+    submitPassword.addEventListener('click', checkPassword);
+    sitePassword.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
+
+    function checkPassword() {
+        if (sitePassword.value === '205666') {
+            passwordOverlay.style.display = 'none';
+            body.classList.remove('password-protected');
+        } else {
+            alert('Incorrect password. Please try again.');
+            sitePassword.value = '';
+        }
     }
 });
 
-searchBar.addEventListener('input', function() {
-    const query = this.value;
-    // Implement search functionality here
-    // For example, filter files from a list based on query
-});
-
-uploadForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const fileInput = document.getElementById('file-input');
-    const file = fileInput.files[0];
-    
-    if (file) {
-        // Implement file upload functionality here
-        // You would typically send this file to your server or a cloud storage service
-        console.log('File ready to upload:', file.name);
-    } else {
-        alert('الرجاء اختيار ملف للتحميل');
-    }
-});
-
-darkModeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.classList.add('animate-hammer');
-    setTimeout(() => {
-        this.classList.remove('animate-hammer');
-    }, 1000);
-    
-    // Store the preference
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-});
-
-// Check and apply stored preference on page load
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
+// Your existing JavaScript code follows here
