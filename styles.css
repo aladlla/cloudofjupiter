@@ -30,7 +30,7 @@ body {
 
 .logo {
     margin-top: 20px;
-    width: 200px; /* Adjusted size */
+    width: 600px; /* Increased size to 3 times */
     height: auto;
 }
 
