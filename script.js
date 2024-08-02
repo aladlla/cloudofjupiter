@@ -33,4 +33,8 @@ document.getElementById('upload-form').addEventListener('submit', function(event
 
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
+    this.classList.add('animate-hammer');
+    setTimeout(() => {
+        this.classList.remove('animate-hammer');
+    }, 1000);
 });
