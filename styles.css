@@ -73,6 +73,8 @@ button:hover {
 
 #warning-container h1 {
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .note {
@@ -80,8 +82,8 @@ button:hover {
     font-size: 14px;
     color: #555;
     text-align: center;
-    width: 100%;
     font-weight: bold;
+    width: 100%;
 }
 
 .note .reihana {
