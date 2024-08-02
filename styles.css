@@ -3,10 +3,37 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+#dark-mode-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+.logo {
+    margin-top: 20px;
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
 }
 
 #login-container, #welcome-container {
@@ -15,13 +42,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 100px; /* Adjust the width as needed */
-    height: auto;
+    margin-top: 20px;
 }
 
 input[type="text"], input[type="password"], input[type="file"] {
@@ -43,4 +64,31 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #login-container, 
+body.dark-mode #welcome-container {
+    background: #444;
+    color: white;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="password"], 
+body.dark-mode input[type="file"] {
+    background: #555;
+    color: white;
+    border: 1px solid #666;
+}
+
+body.dark-mode button {
+    background-color: #555;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
 }
