@@ -13,36 +13,31 @@ body {
 #top-bar {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding: 10px;
 }
 
 #dark-mode-toggle {
-    background-color: #333;
-    color: white;
+    background-color: transparent;
     border: none;
-    padding: 10px;
+    font-size: 24px;
     cursor: pointer;
-    border-radius: 5px;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #555;
 }
 
 .logo {
     margin-top: 20px;
-    width: 100px; /* Adjust the width as needed */
+    width: 150px; /* Increased size */
     height: auto;
 }
 
 #login-container, #welcome-container {
     background: white;
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 20px;
+    width: 350px; /* Increased width */
 }
 
 input[type="text"], input[type="password"], input[type="file"] {
@@ -64,6 +59,13 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+.note {
+    margin-top: 20px;
+    font-family: 'DG Bebo', sans-serif;
+    font-size: 14px;
+    color: #555;
 }
 
 body.dark-mode {
