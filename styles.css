@@ -84,12 +84,14 @@ button:hover {
     text-align: center;
     font-weight: bold;
     width: 100%;
+    line-height: 1.5; /* Add line height for better readability */
 }
 
 .note .reihana {
     color: red;
     border: 1px solid black;
     padding: 2px;
+    font-size: inherit; /* Ensure this scales with the parent font size */
 }
 
 body.dark-mode {
