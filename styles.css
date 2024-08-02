@@ -17,6 +17,13 @@ body {
     text-align: center;
 }
 
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
+
 input[type="text"], input[type="password"], input[type="file"] {
     width: 80%;
     padding: 10px;
