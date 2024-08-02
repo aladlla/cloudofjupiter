@@ -30,7 +30,7 @@ body {
 
 .logo {
     margin-top: 20px;
-    width: 400px; /* Increased size */
+    width: 400px; /* Increased size to 2x */
     height: auto;
 }
 
@@ -79,7 +79,7 @@ button:hover {
 
 .note {
     font-family: 'DG Bebo', sans-serif;
-    font-size: 56px; /* Increased size to 1.5 times the previous size */
+    font-size: 84px; /* Increased size to 2x the previous size */
     color: #555;
     text-align: center;
     font-weight: bold;
