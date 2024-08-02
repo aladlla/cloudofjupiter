@@ -2,6 +2,9 @@ const loginForm = document.getElementById('login-form');
 const searchBar = document.getElementById('search-bar');
 const uploadForm = document.getElementById('upload-form');
 const darkModeToggle = document.getElementById('dark-mode-toggle');
+const codeModal = document.getElementById('code-modal');
+const accessCodeInput = document.getElementById('access-code');
+const submitCodeButton = document.getElementById('submit-code');
 
 loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -54,3 +57,14 @@ darkModeToggle.addEventListener('click', function() {
 if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark-mode');
 }
+
+// Handle code submission for access
+submitCodeButton.addEventListener('click', function() {
+    const accessCode = accessCodeInput.value;
+    if (accessCode === '205410') {
+        document.body.classList.remove('blurred');
+        codeModal.style.display = 'none';
+    } else {
+        alert('الكود غير صحيح، حاول مرة أخرى.');
+    }
+});
