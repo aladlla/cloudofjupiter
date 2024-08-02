@@ -9,7 +9,8 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         document.getElementById('welcome-container').style.display = 'block';
         document.getElementById('welcome-username').innerText = username;
     } else {
-        alert('Invalid login');
+        // Custom alert message
+        alert("ريحانة: معلوماتك المدخلة غير صحيحة");
     }
 });
 
