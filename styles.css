@@ -3,206 +3,112 @@
   --primary-hover-color: #218838;
   --background-color: #f0f0f0;
   --text-color: #333;
+  --input-bg: #f9f9f9;
+  --input-border: #ddd;
+  --input-focus: #4CAF50;
+  --button-gradient: linear-gradient(135deg, #28a745, #218838);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-#top-bar {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    animation: slideInTop 1s ease-in-out;
-}
-
-@keyframes slideInTop {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-
-#dark-mode-toggle {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-#dark-mode-toggle:hover {
-    transform: scale(1.1);
-}
-
-.logo {
-    margin-top: 20px;
-    width: 400px;
-    height: auto;
-    animation: fadeIn 1s ease-in-out 0.5s;
-    animation-fill-mode: backwards;
-}
+/* ... (keep all the existing styles above) ... */
 
 #login-container, #welcome-container {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 20px;
-    width: 300px;
+    width: 320px;
     animation: slideUp 1s ease-in-out;
 }
 
-@keyframes slideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+#login-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 24px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: right;
+    position: relative;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
 .form-group input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    transition: all 0.3s ease;
+    font-size: 16px;
 }
 
-input[type="text"], input[type="password"], input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus {
-    border-color: var(--primary-color);
+.form-group input:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
 }
 
 button {
     width: 100%;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 12px 20px;
+    border-radius: 8px;
     border: none;
-    background-color: var(--primary-color);
+    background: var(--button-gradient);
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 10px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: var(--primary-hover-color);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-#warning-container {
-    margin-top: 50px;
-    text-align: center;
-    width: 80%;
-    animation: slideInBottom 1s ease-in-out;
-}
-
-@keyframes slideInBottom {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-}
-
-#warning-container h1 {
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out 0.5s;
-    animation-fill-mode: backwards;
-}
-
-.note {
-    font-family: 'DG Bebo', sans-serif;
-    font-size: 36px;
-    color: #555;
-    text-align: center;
-    font-weight: bold;
-    width: 100%;
-    animation: fadeIn 1s ease-in-out 1s;
-    animation-fill-mode: backwards;
-}
-
-.note .reihana {
-    color: red;
-    border: 1px solid black;
-    padding: 2px;
-    font-size: inherit;
-    animation: fadeIn 1s ease-in-out 1.5s;
-    animation-fill-mode: backwards;
-}
+/* ... (keep all the existing styles below) ... */
 
 body.dark-mode {
-    --background-color: #333;
-    --text-color: white;
+    --background-color: #222;
+    --text-color: #f0f0f0;
+    --input-bg: #333;
+    --input-border: #555;
+    --input-focus: #4CAF50;
 }
 
 body.dark-mode #login-container, 
 body.dark-mode #welcome-container {
-    background: #444;
-    color: white;
+    background: #333;
+    color: var(--text-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode input[type="text"], 
 body.dark-mode input[type="password"], 
 body.dark-mode input[type="file"] {
-    background: #555;
-    color: white;
-    border: 1px solid #666;
+    background: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
 }
 
 body.dark-mode button {
-    background-color: #555;
+    background: var(--button-gradient);
 }
 
 body.dark-mode button:hover {
-    background-color: #777;
+    background: linear-gradient(135deg, #218838, #28a745);
 }
 
-@keyframes hammer-swing {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-20deg); }
-    50% { transform: rotate(20deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.hammer.animate-hammer {
-    animation: hammer-swing 0.5s;
-}
-
-@media (max-width: 768px) {
-  .note {
-    font-size: 24px;
-  }
-  
-  #login-container, #welcome-container {
-    width: 90%;
-  }
-}
+/* ... (keep the rest of the styles) ... */
