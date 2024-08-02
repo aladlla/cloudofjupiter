@@ -30,3 +30,7 @@ document.getElementById('upload-form').addEventListener('submit', function(event
         console.log('File ready to upload:', file.name);
     }
 });
+
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
