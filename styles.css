@@ -20,13 +20,17 @@ body {
 #dark-mode-toggle {
     background-color: transparent;
     border: none;
-    font-size: 24px;
     cursor: pointer;
+}
+
+#dark-mode-toggle svg {
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
 }
 
 .logo {
     margin-top: 20px;
-    width: 200px; /* Increased size */
+    width: 200px; /* Adjusted size */
     height: auto;
 }
 
@@ -37,7 +41,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 20px;
-    width: 300px; /* Reduced width */
+    width: 300px; /* Adjusted size */
 }
 
 input[type="text"], input[type="password"], input[type="file"] {
@@ -95,4 +99,15 @@ body.dark-mode button {
 
 body.dark-mode button:hover {
     background-color: #777;
+}
+
+@keyframes hammer-swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.hammer.animate-hammer {
+    animation: hammer-swing 0.5s;
 }
