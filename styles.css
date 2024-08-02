@@ -34,7 +34,7 @@ body {
     height: auto;
 }
 
-#login-container, #welcome-container, #warning-container {
+#login-container, #welcome-container {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -42,9 +42,6 @@ body {
     text-align: center;
     margin-top: 20px;
     width: 300px; /* Adjusted size */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 input[type="text"], input[type="password"], input[type="file"] {
@@ -101,8 +98,7 @@ body.dark-mode {
 }
 
 body.dark-mode #login-container, 
-body.dark-mode #welcome-container, 
-body.dark-mode #warning-container {
+body.dark-mode #welcome-container {
     background: #444;
     color: white;
 }
