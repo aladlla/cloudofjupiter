@@ -63,7 +63,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 20px;
-    width: 300px;
+    width: 350px; /* Increased width for better spacing */
+    max-width: 90%; /* Make it responsive */
     animation: slideUp 1s ease-in-out;
 }
 
@@ -73,7 +74,7 @@ body {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* More space between fields */
     text-align: right;
 }
 
@@ -83,16 +84,18 @@ body {
 }
 
 .form-group input {
-    width: 100%;
-    padding: 8px;
+    width: calc(100% - 20px); /* Adjust width to prevent overflow */
+    padding: 12px; /* Increased padding for better look */
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin: 5px auto; /* Center the input fields */
 }
 
 input[type="text"], input[type="password"], input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
+    width: calc(100% - 20px); /* Adjust width to prevent overflow */
+    padding: 12px; /* Increased padding for better look */
+    margin: 5px auto; /* Center the input fields */
     border-radius: 4px;
     border: 1px solid #ccc;
     transition: border-color 0.3s ease;
@@ -103,8 +106,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 }
 
 button {
-    width: 100%;
-    padding: 10px 20px;
+    width: 100%; /* Full width for the button */
+    padding: 12px; /* Increased padding for better look */
     border-radius: 4px;
     border: none;
     background-color: var(--primary-color);
